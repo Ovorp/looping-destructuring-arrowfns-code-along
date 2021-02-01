@@ -27,7 +27,7 @@ Inside this loop, change the value of each property to 0
 
 function objectLooper(number) {
     for (let key in number) {
-        // Code here
+       number[key] = 0
     }
     return number;
 };
@@ -51,7 +51,9 @@ If a value is greater than 3,000,000 set it to 0
 
 function stateLooper(obj) {
 	for (let key in obj) {
-		// Code here
+		if (obj[key] > 3000000) {
+            obj[key] = 0;
+        }
 	}
 	return obj;
 };
@@ -66,7 +68,12 @@ Once all falsy values and their properties are removed, return the object
 */
 
 function cleanUser(obj) {
-    // Code here
+    for (let key in obj) {
+        if (!obj[key]) {
+            delete obj[key]
+        }
+    }
+    return obj
 };
 
 
@@ -79,7 +86,12 @@ Return the updated user object
 
 // Code here
 
-
+function maxedOut(obj) {
+    for (let key in obj) {
+        obj[key] = 'max';
+    }
+    return obj;
+}
 
 ////////// OBJECT DESTRUCTURING //////////
 
@@ -116,7 +128,7 @@ Destructure this object so that you have 3 distinct variables with values matchi
 */
 
 // Code here
-
+const {cats, dogs, mice} = animalCount;
 
 
 ////////// PROBLEM 6 //////////
@@ -136,7 +148,7 @@ Set the value of students to be 24, mentors to be 3, and instructors to be 5
 */
 
 // Code here
-
+const {students, mentors, instructors} = {students:24, mentors: 3, instructors:5}
 
 
 ////////// PROBLEM 7 //////////
