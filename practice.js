@@ -12,10 +12,10 @@
 
 // Do not edit the code below.
 const number = {
-    age: 30,
-	score: 100,
-	length: 12,
-	year: 2016,
+  age: 30,
+  score: 100,
+  length: 12,
+  year: 2016,
 };
 
 // Do not edit the code above.
@@ -26,20 +26,19 @@ Inside this loop, change the value of each property to 0
 */
 
 function objectLooper(number) {
-    for (let key in number) {
-       number[key] = 0
-    }
-    return number;
-};
-
+  for (let key in number) {
+    number[key] = 0;
+  }
+  return number;
+}
 
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
 const state = {
-    utah: 2942902,
-    texas: 26956958,
-    california: 38802500,
+  utah: 2942902,
+  texas: 26956958,
+  california: 38802500,
 };
 
 // Do not edit the code above.
@@ -50,14 +49,13 @@ If a value is greater than 3,000,000 set it to 0
 */
 
 function stateLooper(obj) {
-	for (let key in obj) {
-		if (obj[key] > 3000000) {
-            obj[key] = 0;
-        }
-	}
-	return obj;
-};
-
+  for (let key in obj) {
+    if (obj[key] > 3000000) {
+      obj[key] = 0;
+    }
+  }
+  return obj;
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -68,14 +66,13 @@ Once all falsy values and their properties are removed, return the object
 */
 
 function cleanUser(obj) {
-    for (let key in obj) {
-        if (!obj[key]) {
-            delete obj[key]
-        }
+  for (let key in obj) {
+    if (!obj[key]) {
+      delete obj[key];
     }
-    return obj
-};
-
+  }
+  return obj;
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -87,10 +84,10 @@ Return the updated user object
 // Code here
 
 function maxedOut(obj) {
-    for (let key in obj) {
-        obj[key] = 'max';
-    }
-    return obj;
+  for (let key in obj) {
+    obj[key] = 'max';
+  }
+  return obj;
 }
 
 ////////// OBJECT DESTRUCTURING //////////
@@ -103,33 +100,31 @@ This is the process called destructuring
 */
 
 // const numbers = {
-    // 	one: "1",
-    // 	two: "2",
-    // 	three: "3",
-    // };
-    
+// 	one: "1",
+// 	two: "2",
+// 	three: "3",
+// };
+
 // const { one, two, three } = numbers;
-    
-    
+
 ////////// PROBLEM 5 //////////
-    
+
 // Do not edit the code below.
 var animalCount = {
-    cats: 2,
-    dogs: 5,
-    mice: 0,
+  cats: 2,
+  dogs: 5,
+  mice: 0,
 };
 
 // Do not edit the code above.
-    
+
 /*
 Above you are given the object animalCount
 Destructure this object so that you have 3 distinct variables with values matching those of the properties from animalCount
 */
 
 // Code here
-const {cats, dogs, mice} = animalCount;
-
+const { cats, dogs, mice } = animalCount;
 
 ////////// PROBLEM 6 //////////
 
@@ -148,8 +143,11 @@ Set the value of students to be 24, mentors to be 3, and instructors to be 5
 */
 
 // Code here
-const {students, mentors, instructors} = {students:24, mentors: 3, instructors:5}
-
+const { students, mentors, instructors } = {
+  students: 24,
+  mentors: 3,
+  instructors: 5,
+};
 
 ////////// PROBLEM 7 //////////
 
@@ -160,8 +158,13 @@ Use destructuring to assign the values of these properties to new variables
 */
 
 // Code here
+const languages = {
+  french: false,
+  english: true,
+  spanish: false,
+};
 
-
+const { french, english, spanish } = languages;
 
 ////////// PROBLEM 8 //////////
 
@@ -195,9 +198,10 @@ Subtract num2 from num1 and return the result
 */
 
 // Code here
-
-
-
+function subtraction(obj) {
+    const {num1, num2, num3} = obj;
+    return num1-num2;
+}
 ////////// PROBLEM 9 //////////
 
 /*
@@ -209,6 +213,10 @@ Using object destructuring, return the total sum of the counts of these animals
 
 // Code here
 
+function zooAnimals(obj) {
+    const {lion, tiger, bear} = obj;
+    return lion + tiger + bear;
+} 
 
 
 ////////// PROBLEM 10 //////////
@@ -237,9 +245,9 @@ Title and name in this sentence should be replaced with the values of the destru
 */
 
 // Code here
-
-
-
+function greeting({name, title}) {
+    return `Hello, ${title} ${name}!`
+}
 ////////// PROBLEM 11 //////////
 
 /*
@@ -250,8 +258,6 @@ Return the value that is truthy
 */
 
 // Code here
-
-
 
 ////////// PROBLEM 12 //////////
 
@@ -265,8 +271,6 @@ Your function should also be contained within a single line
 
 // Code here
 
-
-
 ////////// PROBLEM 13 //////////
 
 /*
@@ -277,8 +281,6 @@ Your function should also be contained within a single line
 */
 
 // Code here
-
-
 
 ////////// PROBLEM 14 //////////
 
@@ -306,8 +308,6 @@ function double(num) {
 
 // Code here
 
-
-
 ////////// PROBLEM 15 //////////
 
 /*
@@ -318,8 +318,6 @@ You should not use the ES5 function declaration or function expression syntax in
 */
 
 // Code here
-
-
 
 ////////// PROBLEM 16 //////////
 
@@ -332,8 +330,6 @@ You should not use the ES5 function declaration or function expression syntax in
 
 // Code here
 
-
-
 ////////// PROBLEM 17 //////////
 
 /*
@@ -345,8 +341,6 @@ You should not use the ES5 function declaration or function expression syntax in
 */
 
 // Code here
-
-
 
 ////////// PROBLEM 18 //////////
 
@@ -362,17 +356,14 @@ You should not use a for loop, but should use the filter method instead
 
 // Do not edit the code below.
 let jobs = [
-	{ receptionist: "James" },
-	{ programmer: "Steve" },
-	{ designer: "Alicia" },
+  { receptionist: 'James' },
+  { programmer: 'Steve' },
+  { designer: 'Alicia' },
 ];
 
 // Do not edit the code above.
 
-
 // Code here
-
-
 
 ////////// PROBLEM 19 //////////
 
@@ -386,8 +377,6 @@ You should not use a for loop, but should use the filter method instead
 */
 
 // Code here
-
-
 
 ////////// PROBLEM 20 //////////
 
@@ -404,8 +393,6 @@ You should not use a for loop, but should use the filter method instead
 
 // Code here
 
-
-
 ////////// PROBLEM 21 //////////
 
 /*
@@ -415,11 +402,9 @@ Make sure to use arrow functions combined with the map method
 
 */
 
-const formalGreeting = names => {
-    // Code here
-}
-
-
+const formalGreeting = (names) => {
+  // Code here
+};
 
 ////////// PROBLEM 22 //////////
 
@@ -430,6 +415,6 @@ Make sure to use arrow functions combined with the reduce method
 
 */
 
-const productOfArray = numbers => {
-    // Code here
-}
+const productOfArray = (numbers) => {
+  // Code here
+};
