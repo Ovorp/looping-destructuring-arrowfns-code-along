@@ -258,7 +258,9 @@ Return the value that is truthy
 */
 
 // Code here
-
+function truthyFalsy({number, string}) {
+  return (number)? number : string;
+}
 ////////// PROBLEM 12 //////////
 
 /*
@@ -270,7 +272,7 @@ Your function should also be contained within a single line
 */
 
 // Code here
-
+const isGreaterThanTwenty = (num) => (num > 20)? true : false;
 ////////// PROBLEM 13 //////////
 
 /*
@@ -281,7 +283,7 @@ Your function should also be contained within a single line
 */
 
 // Code here
-
+const seven = () => 7;
 ////////// PROBLEM 14 //////////
 
 /*
@@ -307,6 +309,9 @@ function double(num) {
 */
 
 // Code here
+const add = (num1, num2) => num1 + num2;
+const subtraction = (num1, num2) => num1 - num2;
+const double = (num) => num *2; 
 
 ////////// PROBLEM 15 //////////
 
