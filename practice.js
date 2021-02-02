@@ -271,9 +271,9 @@ You should not use the ES5 function declaration or function expression syntax in
 Your function should also be contained within a single line
 */
 
-// Code here
+// // Code here
 const isGreaterThanTwenty = (num) => (num > 20)? true : false;
-////////// PROBLEM 13 //////////
+// ////////// PROBLEM 13 //////////
 
 /*
 Create a one line arrow function called seven that will return the number 7
@@ -310,8 +310,8 @@ function double(num) {
 
 // Code here
 const add = (num1, num2) => num1 + num2;
-const subtraction = (num1, num2) => num1 - num2;
-const double = (num) => num *2; 
+const subtract = (num1, num2) => num1 - num2;
+const double = (num) => num * 2; 
 
 ////////// PROBLEM 15 //////////
 
@@ -323,7 +323,7 @@ You should not use the ES5 function declaration or function expression syntax in
 */
 
 // Code here
-
+const multiply = (num1, num2) => num1*num2;
 ////////// PROBLEM 16 //////////
 
 /*
@@ -334,7 +334,7 @@ You should not use the ES5 function declaration or function expression syntax in
 */
 
 // Code here
-
+const concatenate = (str1, str2) => str1 + str2;
 ////////// PROBLEM 17 //////////
 
 /*
@@ -346,7 +346,7 @@ You should not use the ES5 function declaration or function expression syntax in
 */
 
 // Code here
-
+const gemInfo = (gemType, gemSize, gemWeight) => ({gemType, gemSize, gemWeight});
 ////////// PROBLEM 18 //////////
 
 /*
@@ -369,6 +369,11 @@ let jobs = [
 // Do not edit the code above.
 
 // Code here
+const identifier = (arr) => {
+  let objInArr = arr.filter(job => Object.keys(job) == 'programmer');
+  return objInArr[0]
+};
+
 
 ////////// PROBLEM 19 //////////
 
@@ -382,7 +387,7 @@ You should not use a for loop, but should use the filter method instead
 */
 
 // Code here
-
+const evens = (arr) => arr.filter(num => num%2 ===0);
 ////////// PROBLEM 20 //////////
 
 /*
@@ -397,7 +402,7 @@ You should not use a for loop, but should use the filter method instead
 */
 
 // Code here
-
+const startWithLetterA = (arr) => arr.filter(str => str[0] === 'A' || str[0] === 'a');
 ////////// PROBLEM 21 //////////
 
 /*
@@ -408,7 +413,7 @@ Make sure to use arrow functions combined with the map method
 */
 
 const formalGreeting = (names) => {
-  // Code here
+  return names.map(str => `Hello, ${str}`)
 };
 
 ////////// PROBLEM 22 //////////
@@ -421,5 +426,5 @@ Make sure to use arrow functions combined with the reduce method
 */
 
 const productOfArray = (numbers) => {
-  // Code here
+  return numbers.reduce((num1,num2) => num1*num2);
 };
