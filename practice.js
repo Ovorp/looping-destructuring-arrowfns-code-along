@@ -388,6 +388,7 @@ You should not use a for loop, but should use the filter method instead
 
 // Code here
 const evens = (arr) => arr.filter(num => num%2 ===0);
+
 ////////// PROBLEM 20 //////////
 
 /*
@@ -426,5 +427,5 @@ Make sure to use arrow functions combined with the reduce method
 */
 
 const productOfArray = (numbers) => {
-  return numbers.reduce((num1,num2) => num1*num2);
+  return numbers.reduce((num1,num2) => num1 * num2);
 };
