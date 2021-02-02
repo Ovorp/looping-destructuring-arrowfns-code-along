@@ -253,14 +253,14 @@ describe("Problem 18 - identifier", function () {
 		expect(typeof identifier).toBe("function")
     });
     it("should return the correct object associated with the programmer from the jobs array", function () {
-        let result = identifier()
+        let result = identifier(jobs)
         expect(result.programmer).toBe("Steve")
         jobs = [
             { programmer: "James" },
             { employee: "Steve" },
             { designer: "Alicia" },
         ]
-        result = identifier()
+        result = identifier(jobs)
         expect(result.programmer).toBe("James")
     });
 });
