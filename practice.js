@@ -367,10 +367,10 @@ let jobs = [
 ];
 
 // Do not edit the code above.
-
+ 
 // Code here
-const identifier = (arr) => {
-  let objInArr = arr.filter(job => Object.keys(job) == 'programmer');
+const identifier = () => {
+  let objInArr = jobs.filter(job => Object.keys(job) == 'programmer');
   return objInArr[0]
 };
 
